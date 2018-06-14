@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Twitter-like</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -13,8 +13,8 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
+                background-color: #808080;
+                color: #fe2712;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
@@ -37,8 +37,8 @@
 
             .top-right {
                 position: absolute;
-                right: 10px;
-                top: 18px;
+                right: 350px;
+                top: 350px;
             }
 
             .content {
@@ -50,9 +50,9 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color: #fe2711;
                 padding: 0 25px;
-                font-size: 12px;
+                font-size: 15px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
@@ -66,30 +66,25 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
+@if (Route::has('login'))
                 <div class="top-right links">
-                    @auth
+@auth
                         <a href="{{ url('/home') }}">Home</a>
-                    @else
+@else
                         <a href="{{ route('login') }}">Login</a>
                         <a href="{{ route('register') }}">Register</a>
-                    @endauth
+@endauth
                 </div>
-            @endif
+@endif
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Twitter-like
+
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+
                 </div>
             </div>
-        </div>
     </body>
 </html>
