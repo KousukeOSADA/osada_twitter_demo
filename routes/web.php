@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+route::get('/', function () {
+    return view('top');
 });
+Route::group(['middleware' => 'auth'], function () {
+    Route::post('users/{user}/follow', 'UserController@follow')->name('follow');
+    Route::delete('users/{user}/unfollow', 'UserController@unfollow')->name('unfollow');
+});
+route::resource('users', 'UserController');
+route::resource('posts', 'PostController');
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
