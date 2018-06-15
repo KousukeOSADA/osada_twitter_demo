@@ -62,8 +62,11 @@
                         </li>
                     @else
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/') }}">{{ __('ログアウト') }}</a>
-                    </li>
+                      <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">ログアウト
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                      {{ csrf_field() }}
+                      </form>
+                      </a>                    </li>
                     @endguest
                 </ul>
             </div>
