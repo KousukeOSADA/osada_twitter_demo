@@ -8,36 +8,34 @@
     {{ csrf_field() }}
     {{ method_field('DELETE') }}
     <button type="submit" id="delte-follow-{{ $user->id }}" class="btn btn-danger">
-      {{ __('UnFollow') }}
+      {{ __('フォロー解除') }}
     </button>
 </form>
 @else
 <form action="{{route('follow', ['id' => $user->id])}}" method="post">
     {{ csrf_field() }}
     <button type="submit" id="follow-user-{{ $user->id }}" class="btn btn-primary">
-      {{ __('Follow') }}
+      {{ __('フォローする') }}
     </button>
 </form>
 @endif
 
 <!-- ツイートリスト -->
 <br>
-<h2>{{ __('Tweets') }}</h2>
+<h2>{{ __('ツイート一覧') }}</h2>
 <div class="table-responsive">
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>{{ __('Tweets') }}</th>
-                <th>{{ __('Created') }}</th>
-                <th>{{ __('Updated') }}</th>
+                <th>{{ __('ツイート') }}</th>
+
             </tr>
         </thead>
         <tbody>
             @foreach ($user->posts as $post)
                 <tr>
                     <td>{{ $post->tweet }}</td>
-                    <td>{{ $post->created_at }}</td>
-                    <td>{{ $post->updated_at }}</td>
+
                  </tr>
             @endforeach
         </tbody>

@@ -9,10 +9,9 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>{{ __('User')}}</th>
-                <th>{{ __('Tweet') }}</th>
-                <th>{{ __('Created') }}</th>
-                <th>{{ __('Updated') }}</th>
+                <th>{{ __('ユーザー')}}</th>
+                <th>{{ __('ツイート') }}</th>
+                <th>{{ __('日付') }}</th>
             </tr>
         </thead>
         <tbody>
@@ -32,7 +31,6 @@
                     {{ $post->tweet }}
                   @endif
                 </td>
-                <td>{{ $post->created_at }}</td>
                 <td>{{ $post->updated_at }}</td>
              </tr>
         @endif

@@ -15,7 +15,7 @@
 </head>
 <body>
     <!-- グローバルナビ -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info">
         <div class="container">
             <!-- アプリ名 -->
             <a class="navbar-brand" href="{{ url('/') }}">{{ config('app.name') }}</a>
@@ -32,10 +32,10 @@
                   @guest
                   @else
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('posts') }}">{{ __('Tweet List') }}</a>
+                        <a class="nav-link" href="{{ url('posts') }}">{{ __('ツイート一覧') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('users') }}">{{ __('User List') }}</a>
+                        <a class="nav-link" href="{{ url('users') }}">{{ __('ユーザー') }}</a>
                     </li>
                   @endguest
                 </ul>
@@ -47,7 +47,7 @@
                     @else
                     <li class="nav-item">
                         <a href="{{ url('posts/create') }}" id="new-post" class="btn btn-success">
-                            {{ __('New Tweet') }}
+                            {{ __('ツイート') }}
                         </a>
                     </li>
                     @endguest
@@ -55,28 +55,15 @@
                     <!-- ログイン・ログアウト -->
                     @guest
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('ログイン') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('登録') }}</a>
                         </li>
                     @else
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdown-user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-user">
-                                <a class="dropdown-item" href="{{ url('users/'.auth()->user()->id) }}">
-                                    {{ __('Profile') }}
-                                </a>
-                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    {{ csrf_field() }}
-                                </form>
-                            </div>
-                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/') }}">{{ __('ログアウト') }}</a>
+                    </li>
                     @endguest
                 </ul>
             </div>

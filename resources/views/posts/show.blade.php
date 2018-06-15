@@ -37,7 +37,7 @@
 <!-- 編集・削除ボタン -->
 <div class="edit">
     <a href="{{ url('posts/'.$post->id.'/edit') }}" class="btn btn-primary">
-        {{ __('Edit') }}
+        {{ __('編集') }}
     </a>
     @component('components.btn-del')
         @slot('table', 'posts')

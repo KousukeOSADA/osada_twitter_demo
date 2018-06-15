@@ -13,16 +13,16 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #808080;
-                color: #fe2712;
+                background-color: #58B6D2;
+                color: #1a95f6;
                 font-family: 'Raleway', sans-serif;
-                font-weight: 100;
+                font-weight: 200;
                 height: 100vh;
                 margin: 0;
             }
 
             .full-height {
-                height: 100vh;
+                height: 0vh;
             }
 
             .flex-center {
@@ -46,11 +46,11 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 300px;
             }
 
             .links > a {
-                color: #fe2711;
+                color: #1a95f6;
                 padding: 0 25px;
                 font-size: 15px;
                 font-weight: 600;

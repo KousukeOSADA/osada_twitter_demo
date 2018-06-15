@@ -1,5 +1,5 @@
 @php
-    $title = __('Create Tweet');
+    $title = __('いまなにしてる？');
 @endphp
 @extends('layouts.my')
 @section('content')
@@ -9,7 +9,7 @@
     {{ method_field('POST') }}
 
     <div class="form-group">
-        <label for="tweet">{{ __('Tweet') }}</label>
+        <label for="tweet">{{ __('下書き') }}</label>
         <textarea id="tweet" class="form-control" name="tweet" rows="8" required></textarea>
     </div>
     @if($errors->any())
@@ -19,6 +19,6 @@
       @endforeach
     </div>
     @endif
-    <button type="submit" name="submit" class="btn btn-success">{{ __('Submit') }}</button>
+    <button type="submit" name="submit" class="btn btn-success">{{ __('ツイートする') }}</button>
 </form>
 @endsection

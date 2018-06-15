@@ -9,6 +9,6 @@
 @section('content')
 <h1>{{ $title }}</h1>
 <p>
-    {{ __('This is Twitter-like.') }}
+    {{ __('by KosukeOSADA.') }}
 </p>
 @endsection
