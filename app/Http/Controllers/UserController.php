@@ -6,6 +6,7 @@ class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
+     * コメントテスト
      *
      * @return \Illuminate\Http\Response
      */
