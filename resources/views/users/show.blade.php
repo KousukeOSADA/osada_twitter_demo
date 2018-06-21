@@ -35,7 +35,6 @@
             @foreach ($user->posts as $post)
                 <tr>
                     <td>{{ $post->tweet }}</td>
-
                  </tr>
             @endforeach
         </tbody>
